@@ -23,15 +23,15 @@ You can then use the tool...
 
 There's a decent [Wikipedia article](https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity) on International Mobile Equipment Identity (IMEI).
 
-This image, published by [GSMA](https://www.gsma.com/services/gsma-imei/tac-allocation/tac-for-iot/) shows how IMEI numbers are constructed.
+This image, published by [GSMA](https://www.gsma.com/services/gsma-imei/tac-allocation/tac-for-iot/), shows how IMEI numbers are constructed.
 
 <img src="https://raw.githubusercontent.com/bstein/py-imei-generator/master/structure-imei.png"/>
 
 The first 8 digits represent the [Type Allocation Code (TAC)](https://en.wikipedia.org/wiki/Type_Allocation_Code). This identifies the particular model of device to be used on wireless networks. With py-imei-generator, you can specify a TAC (let's say for Phone X) and receive random IMEI numbers that would be interpreted by others as a Phone X device.
 
-The next 6 digits (starting from 1, range would be 9 - 14) are intended to represent the unique serial number given to the device by the manufacturer. You can specify the first 4 of these 6 digits with py-imei-generator.
+The next 6 digits (starting from 1, range would be 9 - 14) are intended to represent the unique serial number given to the device by the manufacturer. You can optionally specify up to 4 of these 6 digits with py-imei-generator.
 
-Finally, the last digit is merely a check digit and is calculated with the [Luhn algorithm](https://github.com/bstein/py-imei-generator/blob/master/structure-imei.png).
+Finally, the last digit is merely a check digit and is calculated with the [Luhn algorithm](https://github.com/bstein/py-imei-generator/blob/master/structure-imei.png). This number is automatically calculated by py-imei-generator.
 
 ## Disclaimer
 
